@@ -21,5 +21,7 @@ window.addEventListener("onclick", playmu);
 
 function playmu(t1) {
   var mu = new Audio(t1.toUpperCase() + ".mp3");
+    var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+ document.body.style.backgroundColor = randomColor;
   mu.play();
 }
