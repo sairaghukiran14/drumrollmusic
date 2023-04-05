@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nabla&family=Roboto:wght@400;900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+      div {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .head p:first-child {
+        font-family: "Righteous", cursive;
+        color: orange;
+        font-weight: 400;
+        text-align: center;
+        font-size: 50px;
+      }
+      .drum {
+        margin-top: -20px;
+        font-family: "Nabla", cursive;
+        font-size: 80px;
+        text-align: center;
+      }
+      body {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        margin-top: -20px;
+        font-family: "Roboto", sans-serif;
+        padding: 10px 40px 10px 40px;
+        font-size: 30px;
+        border-radius: 5px;
+        border: none;
+        transition: all 0.5s ease-in-out;
+      }
+      button:hover {
+        box-shadow: 5px 5px #888888;
+        transition: all 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <p>Welcome to</p>
+      <p class="drum">Drum Roll Game</p>
+      <button onclick="myFunc()">Play</button>
+    </div>
+    <script>
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("onclick", myFunc);
+      function myFunc() {
+        var t = confirm("Confirm");
+        if (t) {
+          window.location.assign("drums.html");
+        }
+      }
+    </script>
+  </body>
+</html>
